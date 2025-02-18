@@ -89,9 +89,9 @@ function Hero({ subscriberCount }: { subscriberCount: number }) {
               </div>
             </form>
           </div>
-          <div className="justify-self-end overflow-hidden pt-12">
+          <div className="justify-items-end overflow-hidden pt-12">
             <p className="pb-4 text-white">Written by Nick van Osdol</p>
-            <div className="flex justify-end gap-6">
+            <div className="flex gap-6">
               <Link
                 href="https://www.instagram.com/nickvanosdol"
                 target="_blank"
