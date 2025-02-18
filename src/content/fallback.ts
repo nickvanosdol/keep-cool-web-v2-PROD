@@ -1,6 +1,8 @@
 // These are used in case API call to retrieve posts fails. Should be updated to recent posts occasionally
 
-export const fallback = [
+import type { PostType } from '../../beehiiv/types/post'
+
+export const fallback: PostType[] = [
   {
     id: 'post_dfa9125a-bfb2-4422-9657-ebbec9fa0eae',
     title: 'The When, Where, Who, and Why of Methane Emissions',
@@ -23,7 +25,7 @@ export const fallback = [
     content_tags: ['article'],
     meta_default_description:
       "Methane emissions mitigation would be one of the fastest ways to slow global warming. Solutions exist and are often economically viable, not just environmental nice-to-haves. Still, methane receives a tiny sliver of total climate finance. Hence, it's worth asking (and iteratively testing) how better, data-driven storytelling might shift this dynamic.",
-    meta_default_title: null,
+    meta_default_title: '',
     hidden_from_feed: false,
   },
   {
@@ -45,8 +47,8 @@ export const fallback = [
     audience: 'both',
     platform: 'both',
     content_tags: ['newsletter'],
-    meta_default_description: null,
-    meta_default_title: null,
+    meta_default_description: '',
+    meta_default_title: '',
     hidden_from_feed: false,
   },
   {
@@ -68,8 +70,8 @@ export const fallback = [
     audience: 'both',
     platform: 'both',
     content_tags: ['article'],
-    meta_default_description: null,
-    meta_default_title: null,
+    meta_default_description: '',
+    meta_default_title: '',
     hidden_from_feed: false,
   },
 ]

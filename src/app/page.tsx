@@ -26,11 +26,7 @@ export const metadata: Metadata = {
     'Keep Cool covers the business of climate tech & energy. Join 17000+ climate investors, operators, & the climate-curious.',
 }
 
-const currentSubCount = 17501 // used in case API call to retrieve subscriber count fails, should be updated with real number occasionally
-
-async function Hero() {
-  let subscriberCount = await getSubscriberCount()
-
+function Hero({ subscriberCount }: { subscriberCount: number }) {
   return (
     <div className="relative">
       <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-black/5 ring-inset" />
@@ -67,11 +63,9 @@ async function Hero() {
           </p>
           <p className="mt-8 max-w-lg text-lg/6 font-medium text-gray-950/75 sm:text-xl/7">
             Join{' '}
-            {(
-              Math.floor(
-                (!subscriberCount ? currentSubCount : subscriberCount) / 1000,
-              ) * 1000
-            ).toLocaleString('en-US')}
+            {(Math.floor(subscriberCount / 1000) * 1000).toLocaleString(
+              'en-US',
+            )}
             + readers here:
           </p>
           <div className="mt-4 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
@@ -138,7 +132,7 @@ async function Hero() {
   )
 }
 
-async function FeaturedPosts() {
+function FeaturedPosts({ featuredPosts }: { featuredPosts: PostType[] }) {
   function unixToReadable(timestamp: number) {
     return new Date(timestamp * 1000).toLocaleString('en-US', {
       year: 'numeric',
@@ -146,12 +140,6 @@ async function FeaturedPosts() {
       day: 'numeric',
     })
   }
-  let featuredPosts = await getFeaturedPosts()
-  if (featuredPosts) {
-  } else {
-    featuredPosts = fallback
-  }
-
   return (
     <div className="py-8 sm:py-12">
       <div className="mx-auto max-w-7xl">
@@ -310,24 +298,16 @@ function DarkBentoSection() {
   )
 }
 
-async function Testimonials() {
+function Testimonials({ subscriberCount }: { subscriberCount: number }) {
   function classNames(...classes: any) {
     return classes.filter(Boolean).join(' ')
   }
-
-  let subscriberCount = await getSubscriberCount()
-
   return (
     <div className="relative isolate bg-white pt-24 pb-32 sm:pt-32">
       <div className="mx-auto max-w-7xl">
         <Subheading>What people are saying</Subheading>
         <Heading as="h3" className="mt-2">
-          Trusted by{' '}
-          <AnimatedNumber
-            start={0}
-            end={!subscriberCount ? currentSubCount : subscriberCount}
-          />{' '}
-          readers
+          Trusted by <AnimatedNumber start={0} end={subscriberCount} /> readers
         </Heading>
         <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm/6 text-gray-900 sm:mt-16 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
           <figure className="rounded-2xl bg-white ring-1 shadow-lg ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
@@ -408,9 +388,15 @@ async function Testimonials() {
 }
 
 export default async function Home() {
+  const currentSubCount = 17501 // used in case API call to retrieve subscriber count fails, should be updated with real number occasionally
+
+  let subscriberCount = await getSubscriberCount(currentSubCount)
+
+  let featuredPosts = await getFeaturedPosts(fallback)
+
   return (
     <div className="overflow-hidden">
-      <Hero />
+      <Hero subscriberCount={subscriberCount} />
       <main>
         <Container className="mt-10">
           <Subheading className="mb-4">Supported by</Subheading>
@@ -426,7 +412,7 @@ export default async function Home() {
               Subscribe today to receive climate insights and industry deep
               dives delivered straight to your inbox, every Thursday and Sunday.
             </Lead>
-            <FeaturedPosts />
+            <FeaturedPosts featuredPosts={featuredPosts} />
             <Link
               href="https://www.keepcool.co/archive"
               className="flex w-fit items-center gap-1 rounded-full border-2 border-[#7F9AF9] bg-[#5C14D8] px-3 py-0.5 text-sm/6 font-medium text-white data-hover:bg-[#5C14D8DD]"
@@ -441,7 +427,7 @@ export default async function Home() {
         <DarkBentoSection />
       </main>
       <Container>
-        <Testimonials />
+        <Testimonials subscriberCount={subscriberCount} />
       </Container>
       <Footer />
     </div>
