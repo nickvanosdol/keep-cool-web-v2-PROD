@@ -138,7 +138,7 @@ async function Hero() {
   )
 }
 
-export async function FeaturedPosts() {
+async function FeaturedPosts() {
   function unixToReadable(timestamp: number) {
     return new Date(timestamp * 1000).toLocaleString('en-US', {
       year: 'numeric',
@@ -310,7 +310,7 @@ function DarkBentoSection() {
   )
 }
 
-export async function Testimonials() {
+async function Testimonials() {
   function classNames(...classes: any) {
     return classes.filter(Boolean).join(' ')
   }
