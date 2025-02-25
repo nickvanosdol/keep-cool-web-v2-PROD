@@ -12,14 +12,16 @@ import { Gradient } from '@/components/gradient'
 import { Link } from '@/components/link'
 import { LogoCloud } from '@/components/logo-cloud'
 import { Navbar } from '@/components/navbar'
-import { Heading, Lead, Subheading } from '@/components/text'
+import { Heading, Subheading } from '@/components/text'
 import { authors } from '@/content/authors'
 import { fallback } from '@/content/fallback'
 import { featuredTestimonial, testimonials } from '@/content/testimonials'
-import { ChevronRightIcon } from '@heroicons/react/16/solid'
+import { ChevronRightIcon, LockClosedIcon } from '@heroicons/react/16/solid'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { getFeaturedPosts, getSubscriberCount } from '../../beehiiv/queries'
 import type { PostType } from '../../beehiiv/types/post'
+import clouds from '../../public/clouds.jpeg'
 
 export const metadata: Metadata = {
   description:
@@ -30,11 +32,16 @@ function Hero({ subscriberCount }: { subscriberCount: number }) {
   return (
     <div className="relative">
       <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-black/5 ring-inset" />
+      <Image
+        src={clouds}
+        alt="clouds background"
+        className="absolute h-full w-full rounded-4xl object-cover px-2 pt-2 opacity-20"
+      />
       <Container className="relative">
         <Navbar
           banner={
             <>
-              <Link
+              {/* <Link
                 href="https://grizzlyads.com/store/keep-cool"
                 target="_blank"
                 rel="noreferrer"
@@ -42,7 +49,7 @@ function Hero({ subscriberCount }: { subscriberCount: number }) {
               >
                 🤝 Advertise with us
                 <ChevronRightIcon className="size-4" />
-              </Link>
+              </Link> */}
               <Link
                 href="https://keepcool.co"
                 className="ml-4 flex items-center gap-1 rounded-full bg-sky-950/35 px-3 py-0.5 text-sm/6 font-medium text-white data-hover:bg-sky-950/30"
@@ -57,9 +64,9 @@ function Hero({ subscriberCount }: { subscriberCount: number }) {
           <h1 className="font-display text-7xl/[0.9] font-medium tracking-tight text-balance text-gray-950 sm:text-8xl/[0.8] md:text-9xl/[0.8]">
             Keep Cool.
           </h1>
-          <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
-            A weekly newsletter telling underpriced stories at the intersection
-            of climate & business.
+          <p className="mt-8 max-w-xl text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
+            A twice weekly newsletter telling underpriced stories at the
+            intersection of climate tech & business.
           </p>
           <p className="mt-8 max-w-lg text-lg/6 font-medium text-gray-950/75 sm:text-xl/7">
             Join{' '}
@@ -174,6 +181,15 @@ function FeaturedPosts({ featuredPosts }: { featuredPosts: PostType[] }) {
                     {post.content_tags[0].charAt(0).toUpperCase() +
                       post.content_tags[0].slice(1)}
                   </a>
+                  {post.audience === 'premium' && (
+                    <a
+                      href={'https://www.keepcool.co/upgrade'}
+                      className="relative z-10 flex items-center gap-1 rounded-full bg-[#5C14D8] px-3 py-1 font-medium text-white hover:bg-[#5C14D8DD]"
+                    >
+                      <LockClosedIcon className="size-3" />
+                      Premium
+                    </a>
+                  )}
                 </div>
                 <div className="group relative">
                   <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
@@ -305,7 +321,7 @@ function Testimonials({ subscriberCount }: { subscriberCount: number }) {
     return classes.filter(Boolean).join(' ')
   }
   return (
-    <div className="relative isolate bg-white pt-24 pb-32 sm:pt-32">
+    <div className="relative isolate pt-24 pb-12 sm:pt-32">
       <div className="mx-auto max-w-7xl">
         <Subheading>What people are saying</Subheading>
         <Heading as="h3" className="mt-2">
@@ -401,19 +417,21 @@ export default async function Home() {
       <Hero subscriberCount={subscriberCount} />
       <main>
         <Container className="mt-10">
-          <Subheading className="mb-4">Supported by</Subheading>
+          <Subheading className="mb-4">
+            Join readers from orgs including
+          </Subheading>
           <LogoCloud />
         </Container>
-        <div className="bg-linear-to-b from-white from-50% to-gray-100 pt-10 pb-32">
+        <div className="bg-linear-to-b from-white from-50% to-gray-50 pt-10 pb-32">
           <Container>
-            <Heading as="h1" className="border-t-1 border-t-gray-200 pt-16">
+            <Heading as="h1" className="border-t-1 border-t-gray-200 pt-14">
               {/* <Subheading className="mb-4">What to expect</Subheading> */}
               Featured posts
             </Heading>
-            <Lead className="mt-6 max-w-3xl">
+            {/* <Lead className="mt-6 max-w-3xl">
               Subscribe today to receive climate insights and industry deep
               dives delivered straight to your inbox, every Thursday and Sunday.
-            </Lead>
+            </Lead> */}
             <FeaturedPosts featuredPosts={featuredPosts} />
             <Link
               href="https://www.keepcool.co/archive"
@@ -425,12 +443,12 @@ export default async function Home() {
           </Container>
           {/* <FeatureSection /> */}
           {/* <BentoSection /> */}
+          {/* <DarkBentoSection /> */}
+          <Container>
+            <Testimonials subscriberCount={subscriberCount} />
+          </Container>
         </div>
-        <DarkBentoSection />
       </main>
-      <Container>
-        <Testimonials subscriberCount={subscriberCount} />
-      </Container>
       <Footer />
     </div>
   )

@@ -13,12 +13,12 @@ function CallToAction() {
       <hgroup>
         <Subheading>Subscribe Today</Subheading>
         <p className="mt-6 text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
-          Ready to cool off?
+          Ready to Keep Cool?
         </p>
       </hgroup>
-      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
-        Subscribe to Keep Cool to get insights and deep dives delivered straight
-        to your inbox.
+      <p className="mx-auto mt-6 max-w-md text-sm/6 text-gray-500">
+        Subscribe today to dive into under-appreciated stories at the
+        intersection of climate, energy, business, technology, and more.
       </p>
       <div className="mt-4 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
         <form className="mx-auto max-w-lg md:w-1/2">
