@@ -174,13 +174,15 @@ function FeaturedPosts({ featuredPosts }: { featuredPosts: PostType[] }) {
                   >
                     {unixToReadable(post.publish_date!)}
                   </time>
-                  <a
-                    href={`https://www.keepcool.co/archive?tags=${post.content_tags[0]}`}
-                    className="relative z-10 rounded-full bg-gray-50 px-3 py-1 font-medium text-gray-600 hover:bg-gray-100"
-                  >
-                    {post.content_tags[0].charAt(0).toUpperCase() +
-                      post.content_tags[0].slice(1)}
-                  </a>
+                  {post.content_tags[0] && (
+                    <a
+                      href={`https://www.keepcool.co/archive?tags=${post.content_tags[0]}`}
+                      className="relative z-10 rounded-full bg-gray-50 px-3 py-1 font-medium text-gray-600 hover:bg-gray-100"
+                    >
+                      {post.content_tags[0].charAt(0).toUpperCase() +
+                        post.content_tags[0].slice(1)}
+                    </a>
+                  )}
                   {post.audience === 'premium' && (
                     <a
                       href={'https://www.keepcool.co/upgrade'}
