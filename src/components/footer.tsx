@@ -282,7 +282,7 @@ export function Footer() {
                 </PlusGridItem>
               </div>
               <div className="flex">
-                <PlusGridItem className="flex items-center gap-8 py-3">
+                <PlusGridItem className="flex items-center gap-5 py-3 sm:gap-8">
                   <SocialLinks />
                 </PlusGridItem>
               </div>
