@@ -55,9 +55,10 @@ export async function getFeaturedPosts(fallbackPosts: PostType[]) {
           headers,
         })
         let formattedRes = await res.json()
-        postsArray.unshift(formattedRes.data)
+        postsArray.push(formattedRes.data)
       }),
     )
+    postsArray.sort((a, b) => b.created - a.created)
     return postsArray
   } catch (err) {
     return fallbackPosts
