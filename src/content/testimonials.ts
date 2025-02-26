@@ -43,14 +43,6 @@ export const testimonials = [
           imageUrl: '',
         },
       },
-      {
-        body: 'Great article. You’ve always had a way with words. Thanks for a refreshingly holistic look on a complex issue. Sometimes the full picture is a mosaic of each narrative. Looking forward to more reads!',
-        author: {
-          name: '',
-          handle: '',
-          imageUrl: '',
-        },
-      },
       // More testimonials...
     ],
     [
@@ -86,7 +78,14 @@ export const testimonials = [
           imageUrl: '',
         },
       },
-
+      {
+        body: 'Great article. You’ve always had a way with words. Thanks for a refreshingly holistic look on a complex issue. Sometimes the full picture is a mosaic of each narrative. Looking forward to more reads!',
+        author: {
+          name: '',
+          handle: '',
+          imageUrl: '',
+        },
+      },
       // More testimonials...
     ],
   ],
@@ -110,6 +109,14 @@ export const testimonials = [
       },
       {
         body: 'Thank you, some great insights which helped me get a handle on what is going on. Very Sun Tzu.',
+        author: {
+          name: '',
+          handle: '',
+          imageUrl: '',
+        },
+      },
+      {
+        body: 'Moments before going to bed, I’m reading your newsletter and I’m deeply touched. Especially about your perspective on our ‘discourse,’ I feel that so much.',
         author: {
           name: '',
           handle: '',
@@ -145,14 +152,6 @@ export const testimonials = [
       },
       {
         body: 'Really liked this one, it’s a nice way to say: ‘Yes, climate change, and there’s no one to save us but ourselves so get doing.',
-        author: {
-          name: '',
-          handle: '',
-          imageUrl: '',
-        },
-      },
-      {
-        body: 'Moments before going to bed, I’m reading your newsletter and I’m deeply touched. Especially about your perspective on our ‘discourse,’ I feel that so much.',
         author: {
           name: '',
           handle: '',

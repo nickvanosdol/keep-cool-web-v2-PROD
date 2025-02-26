@@ -16,7 +16,7 @@ import LogoTicker from '@/components/logo-ticker'
 import { Navbar } from '@/components/navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
 import { fallback } from '@/content/fallback'
-import { featuredTestimonial, testimonials } from '@/content/testimonials'
+import { testimonials } from '@/content/testimonials'
 import { ChevronRightIcon, LockClosedIcon } from '@heroicons/react/16/solid'
 import type { Metadata } from 'next'
 import Image from 'next/image'
@@ -290,16 +290,16 @@ function Testimonials({ subscriberCount }: { subscriberCount: number }) {
           Here are some real words from real readers.
         </Lead>
         <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm/6 text-gray-900 sm:mt-16 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
-          <figure className="rounded-2xl bg-white ring-1 shadow-lg ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
+          {/* <figure className="rounded-2xl bg-white ring-1 shadow-lg ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
             <blockquote className="p-6 text-lg font-semibold tracking-tight text-gray-900 sm:p-12 sm:text-xl/8">
               <p>{`“${featuredTestimonial.body}”`}</p>
             </blockquote>
             <figcaption className="flex flex-wrap items-center gap-x-4 gap-y-4 border-t border-gray-900/10 px-6 py-4 sm:flex-nowrap sm:px-12">
-              {/* <img
+              <img
                 alt=""
                 src={featuredTestimonial.author.imageUrl}
                 className="size-10 flex-none rounded-full bg-gray-50"
-              /> */}
+              />
               <div className="flex-auto">
                 <div className="font-semibold">
                   {featuredTestimonial.author.name}
@@ -308,13 +308,13 @@ function Testimonials({ subscriberCount }: { subscriberCount: number }) {
                   {featuredTestimonial.author.handle}
                 </div>
               </div>
-              {/* <img
+              <img
                 alt=""
                 src={featuredTestimonial.author.logoUrl}
                 className="h-10 w-auto flex-none"
-              /> */}
+              />
             </figcaption>
-          </figure>
+          </figure> */}
           {testimonials.map((columnGroup, columnGroupIdx) => (
             <div
               key={columnGroupIdx}
