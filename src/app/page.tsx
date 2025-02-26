@@ -1,4 +1,5 @@
 import { AnimatedNumber } from '@/components/animated-number'
+import BoldGratitude from '@/components/bold-gratitude'
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import {
@@ -331,29 +332,29 @@ function Testimonials({ subscriberCount }: { subscriberCount: number }) {
                     'space-y-8',
                   )}
                 >
-                  {column.map((testimonial) => (
+                  {column.map((testimonial, i) => (
                     <figure
-                      key={testimonial.author.handle}
+                      key={i}
                       className="rounded-2xl bg-white p-6 ring-1 shadow-lg ring-gray-900/5"
                     >
                       <blockquote className="text-gray-900">
-                        <p>{`“${testimonial.body}”`}</p>
+                        <BoldGratitude text={`“${testimonial.body}”`} />
                       </blockquote>
-                      <figcaption className="mt-6 flex items-center gap-x-4">
-                        {/* <img
+                      {/* <figcaption className="mt-6 flex items-center gap-x-4">
+                        <img
                           alt=""
                           src={testimonial.author.imageUrl}
                           className="size-10 rounded-full bg-gray-50"
-                        /> */}
+                        />
                         <div>
                           <div className="font-semibold">
                             - {testimonial.author.name}
                           </div>
-                          {/* <div className="text-gray-600">
+                          <div className="text-gray-600">
                             {testimonial.author.handle}
-                          </div> */}
+                          </div>
                         </div>
-                      </figcaption>
+                      </figcaption> */}
                     </figure>
                   ))}
                 </div>

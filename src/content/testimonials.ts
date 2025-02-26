@@ -5,131 +5,158 @@ export const featuredTestimonial = {
     handle: 'Managing Partner @ Overview Capital',
     imageUrl:
       'https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/testimonial/picture/45497283-d959-41fb-ad64-1792a00f8593/1675278384251.jpg',
-    logoUrl:
-      'https://tailwindui.com/plus-assets/img/logos/savvycal-logo-gray-900.svg',
+    logoUrl: '',
   },
 }
 export const testimonials = [
   [
     [
       {
-        body: 'Keep Cool is how startup founders in climate tech stay ahead of trends. Nick pulls the signal from the noise, distilling the most important items from across the industry into a rapidly digestible format.',
+        body: 'I really like your emails and am impressed by how much work goes into them. When I give money to creators I do it for that reason, rather than because there are specific perks promised. So I basically joined the paid membership to thank you (in a tiny way) for doing the free stuff.',
         author: {
-          name: 'Quincy L.',
-          handle: 'Founder/CEO @ Electric Era',
-          imageUrl:
-            'https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/testimonial/picture/cc8b9318-98a0-4997-b170-a5890dfbfd4c/quincy.jpeg',
+          name: '',
+          handle: '',
+          imageUrl: '',
         },
       },
       {
-        body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
+        body: 'One foot in front of the other. Thank you for this week’s beautiful newsletter.',
         author: {
-          name: 'Leslie A.',
-          handle: 'lesliealexanderzxczxc',
-          imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+          name: '',
+          handle: '',
+          imageUrl: '',
         },
       },
       {
-        body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
+        body: "Very appreciative reader of your newsletter here. I'm a recent grad and trying to wrap my own head around the recent and constant environmental developments in the US. I find your writing incredibly informative…I found your note about your projects to be particularly thought provoking, as I'm myself trying to figure out where to put my limited time and energy into work that feels the most impactful.",
         author: {
-          name: 'Mark S.',
-          handle: 'lesliealexandermvbm',
-          imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+          name: '',
+          handle: '',
+          imageUrl: '',
+        },
+      },
+      {
+        body: 'I have been following and reading your newsletter for a long time and I wanted to say that I appreciate your approach, your articles and the overall education on the industry from funding, global trends and industry setbacks to the unfortunate role emotion and politics plays in these type of efforts sometimes. Again, thank you for everything.',
+        author: {
+          name: '',
+          handle: '',
+          imageUrl: '',
+        },
+      },
+      {
+        body: 'Great article. You’ve always had a way with words. Thanks for a refreshingly holistic look on a complex issue. Sometimes the full picture is a mosaic of each narrative. Looking forward to more reads!',
+        author: {
+          name: '',
+          handle: '',
+          imageUrl: '',
         },
       },
       // More testimonials...
     ],
     [
       {
-        body: 'Aut reprehenderit voluptatem eum asperiores beatae id. Iure molestiae ipsam ut officia rem nulla blanditiis.',
+        body: 'Thank you for the newsletter, this newsletter is one of the best things to come into my inbox every week.',
         author: {
-          name: 'Lindsay W.',
-          handle: 'lindsaywaltonzxcz',
-          imageUrl:
-            'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+          name: '',
+          handle: '',
+          imageUrl: '',
         },
       },
-      // {
-      //   body: 'Aut reprehenderit voluptatem eum asperiores beatae id. Iure molestiae ipsam ut officia rem nulla blanditiis.',
-      //   author: {
-      //     name: 'Helly B.',
-      //     handle: 'lindsaywaltonzxcb',
-      //     imageUrl:
-      //       'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      //   },
-      // },
       {
-        body: 'Voluptas quos itaque ipsam in voluptatem est. Iste eos blanditiis repudiandae. Earum deserunt enim molestiae ipsum perferendis recusandae saepe corrupti.',
+        body: 'I wanted to reach out and say that this was one of the best articles you have written yet, Nick! I was drawn in with every word. Thank you.',
         author: {
-          name: 'Tom C.',
-          handle: 'tomcookcxz',
-          imageUrl:
-            'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+          name: '',
+          handle: '',
+          imageUrl: '',
         },
       },
+      {
+        body: 'Best thing on my feed each week. Thanks for your work, Nick.',
+        author: {
+          name: '',
+          handle: '',
+          imageUrl: '',
+        },
+      },
+      {
+        body: 'I’m a climate and cleantech lobbyist in DC…This last month has sucked, both from a professional perspective and from the perspective of someone that’s dedicated the last 20 years of their life to addressing climate change…This edition of the newsletter was a good one – I appreciate the perspective, especially when partnered with the call to keep up the work. Thanks for writing these.',
+        author: {
+          name: '',
+          handle: '',
+          imageUrl: '',
+        },
+      },
+
       // More testimonials...
     ],
   ],
   [
     [
       {
-        body: 'Voluptas quos itaque ipsam in voluptatem est. Iste eos blanditiis repudiandae. Earum deserunt enim molestiae ipsum perferendis recusandae saepe corrupti.',
+        body: 'Thanks for this article, Nick, it was very much needed today and I appreciate your well-thought-out and researched takes. I also love the amount of quotes, I love relating current events to past nuggets of wisdom. I live in Chico, CA near where the Camp Fire and Park Fire happened, and I have family both down south in LA and north in Redding where the Carr fire was. As you can imagine I have been sufficiently fatigued on fires, but this was a great and refreshing article to reframe your mind and the problems at hand, so thank you again!',
         author: {
-          name: 'Bill N.',
-          handle: 'tomcookvbn',
-          imageUrl:
-            'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+          name: '',
+          handle: '',
+          imageUrl: '',
         },
       },
       {
-        body: 'Voluptas quos itaque ipsam in voluptatem est. Iste eos blanditiis repudiandae. Earum deserunt enim molestiae ipsum perferendis recusandae saepe corrupti.',
+        body: "I also appreciate that you called out COP29 / Azerbaijan. I am Armenian and have spent time in Nagorno-Karabakh and to see the world turn a blind eye is incredibly frustrating. Not to mention the absurdity of a petrostate once again holding the world's climate conference.",
         author: {
-          name: 'Steven T.',
-          handle: 'tomcookcxz',
-          imageUrl:
-            'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+          name: '',
+          handle: '',
+          imageUrl: '',
         },
       },
-      // {
-      //   body: 'Aut reprehenderit voluptatem eum asperiores beatae id. Iure molestiae ipsam ut officia rem nulla blanditiis.',
-      //   author: {
-      //     name: 'Abigail A.',
-      //     handle: 'lindsaywaltonzxcb',
-      //     imageUrl:
-      //       'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      //   },
-      // },
+      {
+        body: 'Thank you, some great insights which helped me get a handle on what is going on. Very Sun Tzu.',
+        author: {
+          name: '',
+          handle: '',
+          imageUrl: '',
+        },
+      },
       // More testimonials...
     ],
     [
       {
-        body: "Climate tech is extremely wide and deep, so it's impossibly difficult to go deep into sector without sacrificing the others, let alone keeping tabs on the whole space. Keep Cool is the climate tech resource that blends breadth and depth without ever sacrificing quality.",
+        body: "Thanks Nick. You nailed the sentiment of what I have been feeling but haven't been able to verbalize since the election.",
         author: {
-          name: 'Leonard K.',
-          handle:
-            'Director of International Affairs @ Rainmaker Technology Corporation',
-          imageUrl:
-            'https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/testimonial/picture/c7ee8c6d-fb09-41ed-8f95-1e38f063f428/1660237248653.jpeg',
+          name: '',
+          handle: '',
+          imageUrl: '',
         },
       },
       {
-        body: 'Molestias ea earum quos nostrum doloremque sed. Quaerat quasi aut velit incidunt excepturi rerum voluptatem minus harum.',
+        body: 'I wish more people were approaching things as intentionally as you.',
         author: {
-          name: 'Anonymous',
-          handle: 'leonardkrasnerzxc',
-          imageUrl:
-            'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+          name: '',
+          handle: '',
+          imageUrl: '',
         },
       },
       {
-        body: 'Molestias ea earum quos nostrum doloremque sed. Quaerat quasi aut velit incidunt excepturi rerum voluptatem minus harum.',
+        body: 'Thank you, Nick. I am unable to sleep tonight, again, anxious about anything my mind can find to think about. I was happy to find your email in my inbox as your takes on the world always interest me. Tonight, I find that you have quieted my mind in some way (not for the first time), enough to reach out for an expression of gratitude. Your style of discussion and communication, of balancing the good and the bad with reality and hope, is what is missing from public discussion. As a young woman struggling to look her personal and planet-wide future in the face, I appreciate you.',
         author: {
-          name: 'Emma A.',
-          handle: 'leonardkrasnerzx',
-          imageUrl:
-            'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+          name: '',
+          handle: '',
+          imageUrl: '',
+        },
+      },
+      {
+        body: 'Really liked this one, it’s a nice way to say: ‘Yes, climate change, and there’s no one to save us but ourselves so get doing.',
+        author: {
+          name: '',
+          handle: '',
+          imageUrl: '',
+        },
+      },
+      {
+        body: 'Moments before going to bed, I’m reading your newsletter and I’m deeply touched. Especially about your perspective on our ‘discourse,’ I feel that so much.',
+        author: {
+          name: '',
+          handle: '',
+          imageUrl: '',
         },
       },
       // More testimonials...
