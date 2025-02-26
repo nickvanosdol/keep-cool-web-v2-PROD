@@ -255,7 +255,7 @@ function FeaturedPosts({ featuredPosts }: { featuredPosts: PostType[] }) {
 
 function DarkBentoSection() {
   return (
-    <div className="mx-2 mt-24 rounded-4xl bg-gray-900 py-16">
+    <div className="mx-2 mt-32 rounded-4xl bg-gray-900 py-16">
       <Container>
         <Subheading dark>Podcast</Subheading>
         <Heading as="h3" dark className="mt-2 max-w-3xl">
