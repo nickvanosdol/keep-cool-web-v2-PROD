@@ -26,7 +26,7 @@ export async function getSubscriberCount(
 
 export async function getFeaturedPosts(fallbackPosts: PostType[]) {
   const params = new URLSearchParams({
-    order_by: 'created',
+    order_by: 'publish_date',
     direction: 'desc',
     limit: '10',
     hidden_from_feed: 'false',
@@ -40,12 +40,12 @@ export async function getFeaturedPosts(fallbackPosts: PostType[]) {
       headers,
     })
     let formattedRes = await res.json()
-    // Next part filters for only articles with a publish date before now (no drafts)
+    // Next part filters for only articles with a publish date before current time (ie no drafts or scheduled posts)
     let publishedOnly = formattedRes.data.filter(
       (post: PostType) => post.publish_date < Date.now() / 1000,
     )
-    // Next part pulls the id for each fetched post and performs a new fetch for that post and adds each one to an array called 'postsArray'
-    // These may seem redundant and stupid -> it is a work-around since Beehiiv's API is trash and won't display all of a post's content_tags (only shows the one filtered for)
+    // Next part pulls the id for each fetched post and performs a new fetch for that post and adds response to an array called 'postsArray'
+    // This may seem redundant and stupid -> it is a work-around since Beehiiv's API is not great and won't display all of a post's content_tags (only shows the one filtered for)
     let postIds = publishedOnly.map((post: PostType) => post.id)
     let postsArray: PostType[] = []
     await Promise.all(
@@ -58,7 +58,7 @@ export async function getFeaturedPosts(fallbackPosts: PostType[]) {
         postsArray.push(formattedRes.data)
       }),
     )
-    postsArray.sort((a, b) => b.created - a.created)
+    postsArray.sort((a, b) => b.publish_date - a.publish_date)
     return postsArray
   } catch (err) {
     return fallbackPosts
