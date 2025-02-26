@@ -285,7 +285,9 @@ function Testimonials({ subscriberCount }: { subscriberCount: number }) {
           Trusted by <AnimatedNumber start={0} end={subscriberCount} />{' '}
           subscribers
         </Heading>
-        <Lead className="mt-6 max-w-3xl">Real words from real readers.</Lead>
+        <Lead className="mt-6 max-w-3xl">
+          Here are some real words from real readers.
+        </Lead>
         <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm/6 text-gray-900 sm:mt-16 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
           <figure className="rounded-2xl bg-white ring-1 shadow-lg ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
             <blockquote className="p-6 text-lg font-semibold tracking-tight text-gray-900 sm:p-12 sm:text-xl/8">
