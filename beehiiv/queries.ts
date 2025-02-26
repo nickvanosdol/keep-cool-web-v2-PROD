@@ -27,7 +27,7 @@ export async function getSubscriberCount(
 export async function getFeaturedPosts(fallbackPosts: PostType[]) {
   const params = new URLSearchParams({
     order_by: 'created',
-    direction: 'asc',
+    direction: 'desc',
     limit: '10',
     hidden_from_feed: 'false',
     status: 'confirmed',
@@ -45,7 +45,7 @@ export async function getFeaturedPosts(fallbackPosts: PostType[]) {
       (post: PostType) => post.publish_date < Date.now() / 1000,
     )
     // Next part pulls the id for each fetched post and performs a new fetch for that post and adds each one to an array called 'postsArray'
-    // These may seem redundant and stupid -> it is a work-around since BeeHiiv's API is trash and won't display all of a post's content_tags (only shows the one filtered for)
+    // These may seem redundant and stupid -> it is a work-around since Beehiiv's API is trash and won't display all of a post's content_tags (only shows the one filtered for)
     let postIds = publishedOnly.map((post: PostType) => post.id)
     let postsArray: PostType[] = []
     await Promise.all(
@@ -55,7 +55,7 @@ export async function getFeaturedPosts(fallbackPosts: PostType[]) {
           headers,
         })
         let formattedRes = await res.json()
-        postsArray.push(formattedRes.data)
+        postsArray.unshift(formattedRes.data)
       }),
     )
     return postsArray
