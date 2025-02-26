@@ -15,7 +15,7 @@ export const testimonials = [
       {
         body: 'Keep Cool is how startup founders in climate tech stay ahead of trends. Nick pulls the signal from the noise, distilling the most important items from across the industry into a rapidly digestible format.',
         author: {
-          name: 'Quincy Lee',
+          name: 'Quincy L.',
           handle: 'Founder/CEO @ Electric Era',
           imageUrl:
             'https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/testimonial/picture/cc8b9318-98a0-4997-b170-a5890dfbfd4c/quincy.jpeg',
@@ -24,7 +24,7 @@ export const testimonials = [
       {
         body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
         author: {
-          name: 'Leslie Alexander',
+          name: 'Leslie A.',
           handle: 'lesliealexanderzxczxc',
           imageUrl:
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
@@ -33,7 +33,7 @@ export const testimonials = [
       {
         body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
         author: {
-          name: 'Leslie Alexander',
+          name: 'Mark S.',
           handle: 'lesliealexandermvbm',
           imageUrl:
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
@@ -45,19 +45,28 @@ export const testimonials = [
       {
         body: 'Aut reprehenderit voluptatem eum asperiores beatae id. Iure molestiae ipsam ut officia rem nulla blanditiis.',
         author: {
-          name: 'Lindsay Walton',
+          name: 'Lindsay W.',
           handle: 'lindsaywaltonzxcz',
           imageUrl:
             'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
         },
       },
+      // {
+      //   body: 'Aut reprehenderit voluptatem eum asperiores beatae id. Iure molestiae ipsam ut officia rem nulla blanditiis.',
+      //   author: {
+      //     name: 'Helly B.',
+      //     handle: 'lindsaywaltonzxcb',
+      //     imageUrl:
+      //       'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      //   },
+      // },
       {
-        body: 'Aut reprehenderit voluptatem eum asperiores beatae id. Iure molestiae ipsam ut officia rem nulla blanditiis.',
+        body: 'Voluptas quos itaque ipsam in voluptatem est. Iste eos blanditiis repudiandae. Earum deserunt enim molestiae ipsum perferendis recusandae saepe corrupti.',
         author: {
-          name: 'Lindsay Walton',
-          handle: 'lindsaywaltonzxcb',
+          name: 'Tom C.',
+          handle: 'tomcookcxz',
           imageUrl:
-            'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+            'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
         },
       },
       // More testimonials...
@@ -68,7 +77,7 @@ export const testimonials = [
       {
         body: 'Voluptas quos itaque ipsam in voluptatem est. Iste eos blanditiis repudiandae. Earum deserunt enim molestiae ipsum perferendis recusandae saepe corrupti.',
         author: {
-          name: 'Tom Cook',
+          name: 'Bill N.',
           handle: 'tomcookvbn',
           imageUrl:
             'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
@@ -77,19 +86,28 @@ export const testimonials = [
       {
         body: 'Voluptas quos itaque ipsam in voluptatem est. Iste eos blanditiis repudiandae. Earum deserunt enim molestiae ipsum perferendis recusandae saepe corrupti.',
         author: {
-          name: 'Tom Cook',
+          name: 'Steven T.',
           handle: 'tomcookcxz',
           imageUrl:
             'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
         },
       },
+      // {
+      //   body: 'Aut reprehenderit voluptatem eum asperiores beatae id. Iure molestiae ipsam ut officia rem nulla blanditiis.',
+      //   author: {
+      //     name: 'Abigail A.',
+      //     handle: 'lindsaywaltonzxcb',
+      //     imageUrl:
+      //       'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      //   },
+      // },
       // More testimonials...
     ],
     [
       {
         body: "Climate tech is extremely wide and deep, so it's impossibly difficult to go deep into sector without sacrificing the others, let alone keeping tabs on the whole space. Keep Cool is the climate tech resource that blends breadth and depth without ever sacrificing quality.",
         author: {
-          name: 'Leonard Krasner',
+          name: 'Leonard K.',
           handle:
             'Director of International Affairs @ Rainmaker Technology Corporation',
           imageUrl:
@@ -99,7 +117,7 @@ export const testimonials = [
       {
         body: 'Molestias ea earum quos nostrum doloremque sed. Quaerat quasi aut velit incidunt excepturi rerum voluptatem minus harum.',
         author: {
-          name: 'Leonard Krasner',
+          name: 'Anonymous',
           handle: 'leonardkrasnerzxc',
           imageUrl:
             'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
@@ -108,7 +126,7 @@ export const testimonials = [
       {
         body: 'Molestias ea earum quos nostrum doloremque sed. Quaerat quasi aut velit incidunt excepturi rerum voluptatem minus harum.',
         author: {
-          name: 'Leonard Krasner',
+          name: 'Emma A.',
           handle: 'leonardkrasnerzx',
           imageUrl:
             'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',

@@ -5,15 +5,15 @@ import {
   Footer,
   SocialIconFacebook,
   SocialIconLinkedIn,
+  SocialIconPodcast,
   SocialIconRss,
   SocialIconX,
 } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
 import { Link } from '@/components/link'
-import { LogoCloud } from '@/components/logo-cloud'
+import LogoTicker from '@/components/logo-ticker'
 import { Navbar } from '@/components/navbar'
-import { Heading, Subheading } from '@/components/text'
-import { authors } from '@/content/authors'
+import { Heading, Lead, Subheading } from '@/components/text'
 import { fallback } from '@/content/fallback'
 import { featuredTestimonial, testimonials } from '@/content/testimonials'
 import { ChevronRightIcon, LockClosedIcon } from '@heroicons/react/16/solid'
@@ -21,7 +21,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { getFeaturedPosts, getSubscriberCount } from '../../beehiiv/queries'
 import type { PostType } from '../../beehiiv/types/post'
-import clouds from '../../public/clouds.jpeg'
+import clouds from '../../public/clouds.jpg'
 
 export const metadata: Metadata = {
   description:
@@ -35,21 +35,12 @@ function Hero({ subscriberCount }: { subscriberCount: number }) {
       <Image
         src={clouds}
         alt="clouds background"
-        className="absolute h-full w-full rounded-4xl object-cover px-2 pt-2 opacity-20"
+        className="absolute h-full w-full rounded-4xl object-cover px-2 pt-2 opacity-25"
       />
       <Container className="relative">
         <Navbar
           banner={
             <>
-              {/* <Link
-                href="https://grizzlyads.com/store/keep-cool"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-1 rounded-full bg-sky-950/35 px-3 py-0.5 text-sm/6 font-medium text-white data-hover:bg-sky-950/30"
-              >
-                🤝 Advertise with us
-                <ChevronRightIcon className="size-4" />
-              </Link> */}
               <Link
                 href="https://keepcool.co"
                 className="ml-4 flex items-center gap-1 rounded-full bg-sky-950/35 px-3 py-0.5 text-sm/6 font-medium text-white data-hover:bg-sky-950/30"
@@ -126,6 +117,14 @@ function Hero({ subscriberCount }: { subscriberCount: number }) {
                 <SocialIconLinkedIn className="size-6" />
               </Link>
               <Link
+                href="https://podcasts.apple.com/us/podcast/the-keep-cool-podcast/id1613789172"
+                target="_blank"
+                aria-label="Listen to our Podcast"
+                className="text-white data-hover:text-gray-200"
+              >
+                <SocialIconPodcast className="size-6" />
+              </Link>
+              <Link
                 href="https://rss.beehiiv.com/feeds/bOZKJZ4Uhk.xml"
                 target="_blank"
                 aria-label="Visit us on LinkedIn"
@@ -152,11 +151,11 @@ function FeaturedPosts({ featuredPosts }: { featuredPosts: PostType[] }) {
   return (
     <div className="py-8 sm:py-12">
       <div className="mx-auto max-w-7xl">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {featuredPosts.slice(0, 3).map((post: PostType) => (
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          {featuredPosts.slice(0, 6).map((post: PostType) => (
             <article
               key={post.id}
-              className="flex flex-col items-start justify-between rounded-2xl border border-transparent p-4 ring-1 shadow-md ring-[#7F9AF9]/15"
+              className="flex flex-col items-start justify-between rounded-2xl border border-transparent p-4 ring-1 shadow-lg ring-[#7F9AF9]/15"
             >
               <div className="relative w-full">
                 <img
@@ -174,14 +173,24 @@ function FeaturedPosts({ featuredPosts }: { featuredPosts: PostType[] }) {
                   >
                     {unixToReadable(post.publish_date!)}
                   </time>
-                  {post.content_tags[0] && (
-                    <a
-                      href={`https://www.keepcool.co/archive?tags=${post.content_tags[0]}`}
-                      className="relative z-10 rounded-full bg-gray-50 px-3 py-1 font-medium text-gray-600 hover:bg-gray-100"
-                    >
-                      {post.content_tags[0].charAt(0).toUpperCase() +
-                        post.content_tags[0].slice(1)}
-                    </a>
+                  {post.content_tags.map(
+                    (content_tag) =>
+                      content_tag !== 'featured' && ( // Don't need to display the "featured tag", so this filters it out
+                        <a
+                          href={`https://www.keepcool.co/archive?tags=${content_tag}`}
+                          key={content_tag}
+                          className="relative z-10 rounded-full bg-gray-50 px-3 py-1 font-medium text-gray-600 hover:bg-gray-100"
+                        >
+                          {content_tag // formatting
+                            .toLowerCase()
+                            .split(' ')
+                            .map(
+                              (word) =>
+                                word.charAt(0).toUpperCase() + word.slice(1),
+                            )
+                            .join(' ')}
+                        </a>
+                      ),
                   )}
                   {post.audience === 'premium' && (
                     <a
@@ -220,7 +229,7 @@ function FeaturedPosts({ featuredPosts }: { featuredPosts: PostType[] }) {
                         href={
                           post.authors[0] === 'Nick van Osdol'
                             ? 'https://www.keepcool.co/authors/5a6d7740-fd94-447e-a6d6-0b70fe882163'
-                            : ''
+                            : '#'
                         }
                       >
                         <span className="absolute inset-0" />
@@ -246,73 +255,19 @@ function FeaturedPosts({ featuredPosts }: { featuredPosts: PostType[] }) {
 
 function DarkBentoSection() {
   return (
-    <div className="mx-2 mt-2 rounded-4xl bg-gray-900 py-32">
+    <div className="mx-2 mt-24 rounded-4xl bg-gray-900 py-16">
       <Container>
-        <Subheading dark>Meet the Authors</Subheading>
+        <Subheading dark>Podcast</Subheading>
         <Heading as="h3" dark className="mt-2 max-w-3xl">
-          Cool af.
+          Listen to Keep Cool
         </Heading>
-        <ul
-          role="list"
-          className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8"
-        >
-          {authors.map((author) => (
-            <li
-              key={author.xUrl}
-              className="rounded-2xl bg-gray-800 px-8 py-10 text-center"
-            >
-              <img
-                alt=""
-                src={author.imageUrl}
-                className="mx-auto size-48 rounded-full md:size-56"
-              />
-              <h3 className="mt-6 text-base/7 font-semibold tracking-tight text-white">
-                {author.name}
-              </h3>
-              <p className="text-sm/6 text-gray-400">{author.role}</p>
-              <ul role="list" className="mt-6 flex justify-center gap-x-6">
-                <li>
-                  <a
-                    href={author.xUrl}
-                    target="_blank"
-                    className="text-gray-400 hover:text-[#7F9AF9]"
-                  >
-                    <span className="sr-only">X</span>
-                    <svg
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                      className="size-5"
-                    >
-                      <path d="M11.4678 8.77491L17.2961 2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039 18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675 8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925 3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156 17.0075H13.7942L9.57608 10.9742V10.9738Z" />
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={author.linkedinUrl}
-                    target="_blank"
-                    className="text-gray-400 hover:text-[#7F9AF9]"
-                  >
-                    <span className="sr-only">LinkedIn</span>
-                    <svg
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                      className="size-5"
-                    >
-                      <path
-                        d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
-                        clipRule="evenodd"
-                        fillRule="evenodd"
-                      />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          ))}
-        </ul>
+        <iframe
+          // allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+          height="460" // Height should be 450 + 2*(border width)
+          className="mt-6 w-full overflow-hidden rounded-4xl border-5 border-[#7F9AF9]"
+          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+          src="https://embed.podcasts.apple.com/us/podcast/the-keep-cool-podcast/id1613789172"
+        ></iframe>
       </Container>
     </div>
   )
@@ -327,19 +282,21 @@ function Testimonials({ subscriberCount }: { subscriberCount: number }) {
       <div className="mx-auto max-w-7xl">
         <Subheading>What people are saying</Subheading>
         <Heading as="h3" className="mt-2">
-          Trusted by <AnimatedNumber start={0} end={subscriberCount} /> readers
+          Trusted by <AnimatedNumber start={0} end={subscriberCount} />{' '}
+          subscribers
         </Heading>
+        <Lead className="mt-6 max-w-3xl">Real words from real readers.</Lead>
         <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm/6 text-gray-900 sm:mt-16 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
           <figure className="rounded-2xl bg-white ring-1 shadow-lg ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
             <blockquote className="p-6 text-lg font-semibold tracking-tight text-gray-900 sm:p-12 sm:text-xl/8">
               <p>{`“${featuredTestimonial.body}”`}</p>
             </blockquote>
-            <figcaption className="flex flex-wrap items-center gap-x-4 gap-y-4 border-t border-gray-900/10 px-6 py-4 sm:flex-nowrap">
-              <img
+            <figcaption className="flex flex-wrap items-center gap-x-4 gap-y-4 border-t border-gray-900/10 px-6 py-4 sm:flex-nowrap sm:px-12">
+              {/* <img
                 alt=""
                 src={featuredTestimonial.author.imageUrl}
                 className="size-10 flex-none rounded-full bg-gray-50"
-              />
+              /> */}
               <div className="flex-auto">
                 <div className="font-semibold">
                   {featuredTestimonial.author.name}
@@ -348,11 +305,11 @@ function Testimonials({ subscriberCount }: { subscriberCount: number }) {
                   {featuredTestimonial.author.handle}
                 </div>
               </div>
-              <img
+              {/* <img
                 alt=""
                 src={featuredTestimonial.author.logoUrl}
                 className="h-10 w-auto flex-none"
-              />
+              /> */}
             </figcaption>
           </figure>
           {testimonials.map((columnGroup, columnGroupIdx) => (
@@ -381,18 +338,18 @@ function Testimonials({ subscriberCount }: { subscriberCount: number }) {
                         <p>{`“${testimonial.body}”`}</p>
                       </blockquote>
                       <figcaption className="mt-6 flex items-center gap-x-4">
-                        <img
+                        {/* <img
                           alt=""
                           src={testimonial.author.imageUrl}
                           className="size-10 rounded-full bg-gray-50"
-                        />
+                        /> */}
                         <div>
                           <div className="font-semibold">
-                            {testimonial.author.name}
+                            - {testimonial.author.name}
                           </div>
-                          <div className="text-gray-600">
+                          {/* <div className="text-gray-600">
                             {testimonial.author.handle}
-                          </div>
+                          </div> */}
                         </div>
                       </figcaption>
                     </figure>
@@ -409,9 +366,7 @@ function Testimonials({ subscriberCount }: { subscriberCount: number }) {
 
 export default async function Home() {
   const currentSubCount = 17501 // used in case API call to retrieve subscriber count fails, should be updated with real number occasionally
-
   let subscriberCount = await getSubscriberCount(currentSubCount)
-
   let featuredPosts = await getFeaturedPosts(fallback)
 
   return (
@@ -419,10 +374,24 @@ export default async function Home() {
       <Hero subscriberCount={subscriberCount} />
       <main>
         <Container className="mt-10">
-          <Subheading className="mb-4">
-            Join readers from orgs including
-          </Subheading>
-          <LogoCloud />
+          <Subheading className="mb-4">Join readers from orgs like</Subheading>
+          {/* <LogoCloud /> */}
+          <LogoTicker
+            logoPaths={[
+              '/logo-ticker/cbre.svg',
+              '/logo-ticker/dsv.svg',
+              '/logo-ticker/elemental-impact.svg',
+              '/logo-ticker/energize.svg',
+              '/logo-ticker/general-atlantic.svg',
+              '/logo-ticker/generate.png',
+              '/logo-ticker/jpmc.svg',
+              '/logo-ticker/lowercarbon.svg',
+              '/logo-ticker/nucor.svg',
+              '/logo-ticker/panthalassa.svg',
+              '/logo-ticker/siemens.png',
+              '/logo-ticker/watershed.svg',
+            ]}
+          />
         </Container>
         <div className="bg-linear-to-b from-white from-50% to-gray-50 pt-10 pb-32">
           <Container>
@@ -430,10 +399,6 @@ export default async function Home() {
               {/* <Subheading className="mb-4">What to expect</Subheading> */}
               Featured posts
             </Heading>
-            {/* <Lead className="mt-6 max-w-3xl">
-              Subscribe today to receive climate insights and industry deep
-              dives delivered straight to your inbox, every Thursday and Sunday.
-            </Lead> */}
             <FeaturedPosts featuredPosts={featuredPosts} />
             <Link
               href="https://www.keepcool.co/archive"
@@ -445,7 +410,7 @@ export default async function Home() {
           </Container>
           {/* <FeatureSection /> */}
           {/* <BentoSection /> */}
-          {/* <DarkBentoSection /> */}
+          <DarkBentoSection />
           <Container>
             <Testimonials subscriberCount={subscriberCount} />
           </Container>

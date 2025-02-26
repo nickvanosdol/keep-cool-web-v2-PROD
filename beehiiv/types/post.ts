@@ -5,7 +5,7 @@ export type PostType = {
   authors: string[]
   created: number
   status: string
-  publish_date: number | null
+  publish_date: number
   displayed_date: number | null
   split_tested: boolean
   subject_line: string
