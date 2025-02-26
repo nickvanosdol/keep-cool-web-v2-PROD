@@ -263,8 +263,8 @@ function DarkBentoSection() {
         </Heading>
         <iframe
           // allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-          height="452" // Height should be 450 + 2*(border width)
-          className="mt-6 w-full overflow-hidden rounded-2xl border-1 border-[#7F9AF9]"
+          height="454" // Height should be 450 + 2*(border width)
+          className="mt-8 w-full overflow-hidden rounded-2xl border-2 border-[#7F9AF999]"
           sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
           src="https://embed.podcasts.apple.com/us/podcast/the-keep-cool-podcast/id1613789172?theme=dark"
         ></iframe>
