@@ -26,7 +26,7 @@ export async function getSubscriberCount(
 
 export async function getFeaturedPosts(fallbackPosts: PostType[]) {
   const params = new URLSearchParams({
-    order_by: 'publish_date',
+    order_by: 'created',
     direction: 'desc',
     limit: '10',
     hidden_from_feed: 'false',
