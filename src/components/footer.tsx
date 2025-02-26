@@ -17,7 +17,7 @@ function CallToAction() {
         </p>
       </hgroup>
       <p className="mx-auto mt-6 max-w-sm text-sm/6 text-gray-500">
-        Deep dive into under-appreciated stories at the intersection of climate,
+        Dive deep into under-appreciated stories at the intersection of climate,
         energy, business, technology, and more.
       </p>
       <div className="mt-4 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
