@@ -16,9 +16,9 @@ function CallToAction() {
           Ready to Keep Cool?
         </p>
       </hgroup>
-      <p className="mx-auto mt-6 max-w-md text-sm/6 text-gray-500">
-        Subscribe today to dive into under-appreciated stories at the
-        intersection of climate, energy, business, technology, and more.
+      <p className="mx-auto mt-6 max-w-sm text-sm/6 text-gray-500">
+        Deep dive into under-appreciated stories at the intersection of climate,
+        energy, business, technology, and more.
       </p>
       <div className="mt-4 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
         <form className="mx-auto max-w-lg md:w-1/2">
