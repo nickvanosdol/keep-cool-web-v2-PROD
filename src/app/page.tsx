@@ -279,7 +279,7 @@ function Testimonials({ subscriberCount }: { subscriberCount: number }) {
     return classes.filter(Boolean).join(' ')
   }
   return (
-    <div className="relative isolate pt-24 pb-12 sm:pt-32">
+    <div className="relative isolate pt-24 sm:pt-32">
       <div className="mx-auto max-w-7xl">
         <Subheading>What people are saying</Subheading>
         <Heading as="h3" className="mt-2">
