@@ -76,8 +76,7 @@ export async function subscribeUser(prevState: FormState, formData: FormData) {
       headers,
       body: JSON.stringify({
         email: userEmail,
-        sendWelcomeEmail: true,
-        referringSite: 'subscribe.keepcool.co/',
+        reactivate_existing: true,
       }),
     })
     if (!res.ok) {

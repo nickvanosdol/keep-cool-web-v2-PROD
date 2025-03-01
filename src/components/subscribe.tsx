@@ -48,7 +48,7 @@ export default function Subscribe() {
         >
           {state.message.toUpperCase()}.{' '}
         </strong>
-        {state.message === 'success' && 'Check your inbox 😎'}
+        {state.message === 'success' && '😎'}
         {state.message === 'error' && 'Please try again.'}
       </p>
     </form>
