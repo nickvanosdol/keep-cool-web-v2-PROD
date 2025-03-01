@@ -7,7 +7,7 @@ const variants = {
     'inline-flex items-center justify-center px-4 py-[calc(--spacing(2)-1px)]',
     'rounded-full border-2 border-[#7F9AF9] bg-[#5C14D8] shadow-md',
     'text-base font-medium whitespace-nowrap text-white',
-    'data-disabled:bg-gray-950 data-disabled:opacity-40 data-hover:bg-[#5C14D8DD]',
+    'data-disabled:bg-[#5C14D8DD] data-disabled:opacity-40 data-disabled:hover:cursor-default data-hover:bg-[#5C14D8DD]',
   ),
   secondary: clsx(
     'relative inline-flex items-center justify-center px-4 py-[calc(--spacing(2)-1px)]',

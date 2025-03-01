@@ -1,3 +1,6 @@
+'use server'
+
+import type { FormState } from '@/components/subscribe'
 import type { PostType } from './types/post'
 
 const baseUrl = `https://api.beehiiv.com/v2/publications/${process.env.BEEHIIV_PUB_ID}`
@@ -62,5 +65,26 @@ export async function getFeaturedPosts(fallbackPosts: PostType[]) {
     return postsArray
   } catch (err) {
     return fallbackPosts
+  }
+}
+
+export async function subscribeUser(prevState: FormState, formData: FormData) {
+  const userEmail = formData.get('email')
+  try {
+    let res = await fetch(`${baseUrl}/subscriptions`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({
+        email: userEmail,
+        sendWelcomeEmail: true,
+        referringSite: 'subscribe.keepcool.co/',
+      }),
+    })
+    if (!res.ok) {
+      throw new Error()
+    }
+    return { message: 'success' }
+  } catch (err) {
+    return { message: 'error' }
   }
 }

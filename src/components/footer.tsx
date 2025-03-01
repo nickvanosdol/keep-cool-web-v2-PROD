@@ -1,15 +1,15 @@
 import { PlusGrid, PlusGridItem, PlusGridRow } from '@/components/plus-grid'
 import Image from 'next/image'
 import logo from '../../public/keep-cool-logo.png'
-import { Button } from './button'
 import { Container } from './container'
 import { Gradient } from './gradient'
 import { Link } from './link'
+import Subscribe from './subscribe'
 import { Subheading } from './text'
 
 function CallToAction() {
   return (
-    <div className="relative pt-20 pb-16 text-center sm:py-24">
+    <div className="relative pt-20 pb-16 text-center sm:py-20">
       <hgroup>
         <Subheading>Subscribe Today</Subheading>
         <p className="mt-6 text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
@@ -20,26 +20,8 @@ function CallToAction() {
         Dive deep into under-appreciated stories at the intersection of climate,
         energy, business, technology, and more.
       </p>
-      <div className="mt-4 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-        <form className="mx-auto max-w-lg md:w-1/2">
-          <div className="flex gap-x-4">
-            <label htmlFor="email-address" className="sr-only">
-              Email address
-            </label>
-            <input
-              id="email-address"
-              name="email"
-              type="email"
-              required
-              placeholder="Your email address"
-              autoComplete="email"
-              className="relative inline-flex w-full items-center justify-center rounded-full border border-transparent bg-white px-4 py-[calc(--spacing(2)-1px)] ring-1 shadow-md ring-[#7F9AF9]/15 after:absolute after:inset-0 after:rounded-full after:shadow-[inset_0_0_2px_1px_#ffffff4d]"
-            />
-            <Button type="submit" className="hover:cursor-pointer">
-              Subscribe
-            </Button>
-          </div>
-        </form>
+      <div className="mx-auto mt-4 flex max-w-xl flex-col gap-x-6 gap-y-4 sm:flex-row md:w-2/3">
+        <Subscribe />
       </div>
     </div>
   )

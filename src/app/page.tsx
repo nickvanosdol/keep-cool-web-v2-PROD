@@ -1,6 +1,5 @@
 import { AnimatedNumber } from '@/components/animated-number'
 import BoldGratitude from '@/components/bold-gratitude'
-import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import {
   Footer,
@@ -14,6 +13,7 @@ import { Gradient } from '@/components/gradient'
 import { Link } from '@/components/link'
 import LogoTicker from '@/components/logo-ticker'
 import { Navbar } from '@/components/navbar'
+import Subscribe from '@/components/subscribe'
 import { Heading, Lead, Subheading } from '@/components/text'
 import { fallback } from '@/content/fallback'
 import { testimonials } from '@/content/testimonials'
@@ -67,28 +67,10 @@ function Hero({ subscriberCount }: { subscriberCount: number }) {
             )}
             + readers here:
           </p>
-          <div className="mt-4 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <form className="max-w-lg md:w-1/2">
-              <div className="flex gap-x-4">
-                <label htmlFor="email-address" className="sr-only">
-                  Email address
-                </label>
-                <input
-                  id="email-address"
-                  name="email"
-                  type="email"
-                  required
-                  placeholder="Your email address"
-                  autoComplete="email"
-                  className="relative inline-flex w-full items-center justify-center rounded-full border border-transparent bg-white px-4 py-[calc(--spacing(2)-1px)] ring-1 shadow-md ring-[#7F9AF9]/15 after:absolute after:inset-0 after:rounded-full after:shadow-[inset_0_0_2px_1px_#ffffff4d]"
-                />
-                <Button type="submit" className="hover:cursor-pointer">
-                  Subscribe
-                </Button>
-              </div>
-            </form>
+          <div className="mt-4 flex max-w-xl flex-col gap-x-6 gap-y-4 sm:flex-row md:w-2/3">
+            <Subscribe />
           </div>
-          <div className="overflow-hidden pt-12">
+          <div className="mt-6 overflow-hidden">
             <p className="pb-4 text-right text-white">
               Written by Nick van Osdol
             </p>
@@ -166,7 +148,7 @@ function FeaturedPosts({ featuredPosts }: { featuredPosts: PostType[] }) {
                 />
                 <div className="absolute inset-0 rounded-2xl ring-1 ring-gray-900/10 ring-inset" />
               </div>
-              <div className="max-w-xl">
+              <div className="w-full max-w-xl">
                 <div className="mt-4 flex items-center gap-x-4 text-xs">
                   <time
                     dateTime={unixToReadable(post.publish_date!)}
@@ -204,13 +186,13 @@ function FeaturedPosts({ featuredPosts }: { featuredPosts: PostType[] }) {
                   )}
                 </div>
                 <div className="group relative">
-                  <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+                  <h3 className="mt-3 max-w-[calc(100%-4px)] truncate text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
                     <a href={post.web_url}>
                       <span className="absolute inset-0" />
                       {post.title}
                     </a>
                   </h3>
-                  <p className="mt-4 line-clamp-3 text-sm/6 text-gray-600">
+                  <p className="mt-4 max-w-[calc(100%-4px)] truncate text-sm/6 text-gray-600">
                     {post.subtitle}
                   </p>
                 </div>
