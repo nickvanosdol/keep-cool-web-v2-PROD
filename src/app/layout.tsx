@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     'Covering the business of climate tech & energy. Join 18,000+ climate investors, operators, & the climate-curious.',
   openGraph: {
-    title: 'My Blog',
+    title: 'Keep Cool Newsletter',
     description:
       'Covering the business of climate tech & energy. Join 18,000+ climate investors, operators, & the climate-curious.',
     images: ['/clouds.jpg'],
