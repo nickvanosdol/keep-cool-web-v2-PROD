@@ -8,11 +8,11 @@ export const metadata: Metadata = {
     default: 'Keep Cool - Climate Tech Newsletter',
   },
   description:
-    'A twice weekly newsletter telling underpriced stories at the intersection of climate tech & business.',
+    'Covering the business of climate tech & energy. Join 18,000+ climate investors, operators, & the climate-curious.',
   openGraph: {
     title: 'My Blog',
     description:
-      'A twice weekly newsletter telling underpriced stories at the intersection of climate tech & business.',
+      'Covering the business of climate tech & energy. Join 18,000+ climate investors, operators, & the climate-curious.',
     images: ['/clouds.jpg'],
     siteName: 'Keep Cool Newsletter',
     locale: 'en_US',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Keep Cool Newsletter',
     description:
-      'A twice weekly newsletter telling underpriced stories at the intersection of climate tech & business.',
+      'Covering the business of climate tech & energy. Join 18,000+ climate investors, operators, & the climate-curious.',
     images: ['/clouds.jpg'],
   },
 }
