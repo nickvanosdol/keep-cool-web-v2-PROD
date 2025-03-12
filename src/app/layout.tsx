@@ -2,7 +2,7 @@ import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.keepcool.co'),
+  metadataBase: new URL('https://subscribe.keepcool.co'),
   title: {
     template: '%s - Keep Cool',
     default: 'Keep Cool - Climate Tech Newsletter',
