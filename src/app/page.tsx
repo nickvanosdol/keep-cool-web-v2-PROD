@@ -37,6 +37,7 @@ function Hero({ subscriberCount }: { subscriberCount: number }) {
         src={clouds}
         alt="clouds background"
         className="absolute h-full w-full rounded-4xl object-cover px-2 pt-2 opacity-25"
+        priority
       />
       <Container className="relative">
         <Navbar
