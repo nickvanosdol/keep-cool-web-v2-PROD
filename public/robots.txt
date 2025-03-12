@@ -1,0 +1,12 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /api/
+Disallow: /admin/
+
+# Host
+Host: https://www.keepcool.co
+
+# Sitemaps
+Sitemap: https://www.keepcool.co/sitemap.xml
