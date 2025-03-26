@@ -35,8 +35,17 @@ export const testimonials = [
           imageUrl: '',
         },
       },
+
       {
-        body: 'I have been following and reading your newsletter for a long time and I wanted to say that I appreciate your approach, your articles and the overall education on the industry from funding, global trends and industry setbacks to the unfortunate role emotion and politics plays in these type of efforts sometimes. Again, thank you for everything.',
+        body: 'Follow Nick and Keep Cool - best damn climate-tech newsletter out there.',
+        author: {
+          name: '',
+          handle: '',
+          imageUrl: '',
+        },
+      },
+      {
+        body: 'Great article. You’ve always had a way with words. Thanks for a refreshingly holistic look on a complex issue. Sometimes the full picture is a mosaic of each narrative. Looking forward to more reads!',
         author: {
           name: '',
           handle: '',
@@ -79,7 +88,7 @@ export const testimonials = [
         },
       },
       {
-        body: 'Great article. You’ve always had a way with words. Thanks for a refreshingly holistic look on a complex issue. Sometimes the full picture is a mosaic of each narrative. Looking forward to more reads!',
+        body: 'I have been following and reading your newsletter for a long time and I wanted to say that I appreciate your approach, your articles and the overall education on the industry from funding, global trends and industry setbacks to the unfortunate role emotion and politics plays in these type of efforts sometimes. Again, thank you for everything.',
         author: {
           name: '',
           handle: '',
@@ -152,6 +161,14 @@ export const testimonials = [
       },
       {
         body: 'Really liked this one, it’s a nice way to say: ‘Yes, climate change, and there’s no one to save us but ourselves so get doing.',
+        author: {
+          name: '',
+          handle: '',
+          imageUrl: '',
+        },
+      },
+      {
+        body: 'No pressure, but yours is the email list that keeps me going 💪 - Incredible and I don’t know how you are able to put so much into it',
         author: {
           name: '',
           handle: '',
