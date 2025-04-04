@@ -246,11 +246,14 @@ function DarkBentoSection() {
           Listen to Keep Cool
         </Heading>
         <iframe
-          // allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
           height="454" // Height should be 450 + 2*(border width)
+          width="100%"
+          title="Media player"
+          src="https://embed.podcasts.apple.com/us/podcast/the-keep-cool-podcast/id1613789172?itscg=30200&amp;itsct=podcast_box_player&amp;ls=1&amp;mttnsubad=1613789172&amp;theme=dark"
+          id="embedPlayer"
+          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+          allow="autoplay *; encrypted-media *; clipboard-write"
           className="mt-8 w-full overflow-hidden rounded-2xl border-2 border-[#7F9AF999]"
-          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-          src="https://embed.podcasts.apple.com/us/podcast/the-keep-cool-podcast/id1613789172?theme=dark"
         ></iframe>
       </Container>
     </div>
