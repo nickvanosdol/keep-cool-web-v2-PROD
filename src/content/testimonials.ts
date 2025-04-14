@@ -44,7 +44,15 @@ export const testimonials = [
         },
       },
       {
-        body: "I also appreciate that you called out COP29 / Azerbaijan. I am Armenian and have spent time in Nagorno-Karabakh and to see the world turn a blind eye is incredibly frustrating. Not to mention the absurdity of a petrostate once again holding the world's climate conference.",
+        body: 'Great article. You’ve always had a way with words. Thanks for a refreshingly holistic look on a complex issue. Sometimes the full picture is a mosaic of each narrative. Looking forward to more reads!',
+        author: {
+          name: '',
+          handle: '',
+          imageUrl: '',
+        },
+      },
+      {
+        body: 'Anyway, this is a thanks for giving me the words. This will stick with me for a long time.',
         author: {
           name: '',
           handle: '',
@@ -133,7 +141,7 @@ export const testimonials = [
         },
       },
       {
-        body: 'Great article. You’ve always had a way with words. Thanks for a refreshingly holistic look on a complex issue. Sometimes the full picture is a mosaic of each narrative. Looking forward to more reads!',
+        body: "I also appreciate that you called out COP29 / Azerbaijan. I am Armenian and have spent time in Nagorno-Karabakh and to see the world turn a blind eye is incredibly frustrating. Not to mention the absurdity of a petrostate once again holding the world's climate conference.",
         author: {
           name: '',
           handle: '',
