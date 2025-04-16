@@ -5,7 +5,8 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://subscribe.keepcool.co'),
   title: {
     template: '%s - Keep Cool',
-    default: 'Keep Cool - Climate Tech Newsletter',
+    default:
+      'Keep Cool: Learn About The Intersection of Climate, Energy, and Business',
   },
   description:
     'Covering the business of climate tech & energy. Join 18,000+ climate investors, operators, & the climate-curious.',
