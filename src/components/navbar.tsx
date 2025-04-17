@@ -18,7 +18,7 @@ const links = [
     href: 'https://www.keepcool.co/archive',
     label: 'Read',
   },
-  { href: 'https://grizzlyads.com/store/keep-cool', label: 'Advertise' },
+  // { href: 'https://grizzlyads.com/store/keep-cool', label: 'Advertise' },
   { href: 'https://www.keepcool.co/upgrade', label: 'Upgrade' },
   { href: 'https://www.keepcool.co/?modal=login', label: 'Login' },
 ]
