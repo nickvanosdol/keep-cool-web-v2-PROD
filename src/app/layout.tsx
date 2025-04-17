@@ -9,12 +9,12 @@ export const metadata: Metadata = {
       'Keep Cool: Learn About The Intersection of Climate, Energy, and Business',
   },
   description:
-    'Covering the business of climate tech & energy. Join 18,000+ climate investors, operators, & the climate-curious.',
+    'Covering the business of climate tech & energy. Join 17,000+ climate investors, operators, & the climate-curious.',
   openGraph: {
     title: 'Keep Cool Newsletter',
     description:
-      'Covering the business of climate tech & energy. Join 18,000+ climate investors, operators, & the climate-curious.',
-    images: ['/clouds.jpg'],
+      'Covering the business of climate tech & energy. Join 17,000+ climate investors, operators, & the climate-curious.',
+    images: ['/card-preview.jpg'],
     siteName: 'Keep Cool Newsletter',
     locale: 'en_US',
     type: 'website',
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Keep Cool Newsletter',
     description:
-      'Covering the business of climate tech & energy. Join 18,000+ climate investors, operators, & the climate-curious.',
-    images: ['/clouds.jpg'],
+      'Covering the business of climate tech & energy. Join 17,000+ climate investors, operators, & the climate-curious.',
+    images: ['/card-preview.jpg'],
   },
 }
 
