@@ -1,5 +1,3 @@
-import { AnimatedNumber } from '@/components/animated-number'
-import BoldGratitude from '@/components/bold-gratitude'
 import { Container } from '@/components/container'
 import {
   Footer,
@@ -13,10 +11,10 @@ import { Gradient } from '@/components/gradient'
 import { Link } from '@/components/link'
 import LogoTicker from '@/components/logo-ticker'
 import { Navbar } from '@/components/navbar'
+import { Reviews } from '@/components/reviews'
 import Subscribe from '@/components/subscribe'
-import { Heading, Lead, Subheading } from '@/components/text'
+import { Heading, Subheading } from '@/components/text'
 import { fallback } from '@/content/fallback'
-import { testimonials } from '@/content/testimonials'
 import { ChevronRightIcon, LockClosedIcon } from '@heroicons/react/16/solid'
 import type { Metadata } from 'next'
 import Image from 'next/image'
@@ -260,98 +258,98 @@ function DarkBentoSection() {
   )
 }
 
-function Testimonials({ subscriberCount }: { subscriberCount: number }) {
-  function classNames(...classes: any) {
-    return classes.filter(Boolean).join(' ')
-  }
-  return (
-    <div className="relative isolate pt-24 sm:pt-32">
-      <div className="mx-auto max-w-7xl">
-        <Subheading>What people are saying</Subheading>
-        <Heading as="h3" className="mt-2">
-          Trusted by <AnimatedNumber start={0} end={subscriberCount} />{' '}
-          subscribers
-        </Heading>
-        <Lead className="mt-6 max-w-3xl">
-          Here are some real words from real readers.
-        </Lead>
-        <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm/6 text-gray-900 sm:mt-16 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
-          {/* <figure className="rounded-2xl bg-white ring-1 shadow-lg ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
-            <blockquote className="p-6 text-lg font-semibold tracking-tight text-gray-900 sm:p-12 sm:text-xl/8">
-              <p>{`“${featuredTestimonial.body}”`}</p>
-            </blockquote>
-            <figcaption className="flex flex-wrap items-center gap-x-4 gap-y-4 border-t border-gray-900/10 px-6 py-4 sm:flex-nowrap sm:px-12">
-              <img
-                alt=""
-                src={featuredTestimonial.author.imageUrl}
-                className="size-10 flex-none rounded-full bg-gray-50"
-              />
-              <div className="flex-auto">
-                <div className="font-semibold">
-                  {featuredTestimonial.author.name}
-                </div>
-                <div className="text-gray-600">
-                  {featuredTestimonial.author.handle}
-                </div>
-              </div>
-              <img
-                alt=""
-                src={featuredTestimonial.author.logoUrl}
-                className="h-10 w-auto flex-none"
-              />
-            </figcaption>
-          </figure> */}
-          {testimonials.map((columnGroup, columnGroupIdx) => (
-            <div
-              key={columnGroupIdx}
-              className="space-y-8 xl:contents xl:space-y-0"
-            >
-              {columnGroup.map((column, columnIdx) => (
-                <div
-                  key={columnIdx}
-                  className={classNames(
-                    (columnGroupIdx === 0 && columnIdx === 0) ||
-                      (columnGroupIdx === testimonials.length - 1 &&
-                        columnIdx === columnGroup.length - 1)
-                      ? 'xl:row-span-2'
-                      : 'xl:row-start-1',
-                    'space-y-8',
-                  )}
-                >
-                  {column.map((testimonial, i) => (
-                    <figure
-                      key={i}
-                      className="rounded-2xl bg-white p-6 ring-1 shadow-lg ring-gray-900/5"
-                    >
-                      <blockquote className="text-gray-900">
-                        <BoldGratitude text={`“${testimonial.body}”`} />
-                      </blockquote>
-                      {/* <figcaption className="mt-6 flex items-center gap-x-4">
-                        <img
-                          alt=""
-                          src={testimonial.author.imageUrl}
-                          className="size-10 rounded-full bg-gray-50"
-                        />
-                        <div>
-                          <div className="font-semibold">
-                            - {testimonial.author.name}
-                          </div>
-                          <div className="text-gray-600">
-                            {testimonial.author.handle}
-                          </div>
-                        </div>
-                      </figcaption> */}
-                    </figure>
-                  ))}
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  )
-}
+// function Testimonials({ subscriberCount }: { subscriberCount: number }) {
+//   function classNames(...classes: any) {
+//     return classes.filter(Boolean).join(' ')
+//   }
+//   return (
+//     <div className="relative isolate pt-24 sm:pt-32">
+//       <div className="mx-auto max-w-7xl">
+//         <Subheading>What people are saying</Subheading>
+//         <Heading as="h3" className="mt-2">
+//           Trusted by <AnimatedNumber start={0} end={subscriberCount} />{' '}
+//           subscribers
+//         </Heading>
+//         <Lead className="mt-6 max-w-3xl">
+//           Here are some real words from real readers.
+//         </Lead>
+//         <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm/6 text-gray-900 sm:mt-16 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
+//           {/* <figure className="rounded-2xl bg-white ring-1 shadow-lg ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
+//             <blockquote className="p-6 text-lg font-semibold tracking-tight text-gray-900 sm:p-12 sm:text-xl/8">
+//               <p>{`“${featuredTestimonial.body}”`}</p>
+//             </blockquote>
+//             <figcaption className="flex flex-wrap items-center gap-x-4 gap-y-4 border-t border-gray-900/10 px-6 py-4 sm:flex-nowrap sm:px-12">
+//               <img
+//                 alt=""
+//                 src={featuredTestimonial.author.imageUrl}
+//                 className="size-10 flex-none rounded-full bg-gray-50"
+//               />
+//               <div className="flex-auto">
+//                 <div className="font-semibold">
+//                   {featuredTestimonial.author.name}
+//                 </div>
+//                 <div className="text-gray-600">
+//                   {featuredTestimonial.author.handle}
+//                 </div>
+//               </div>
+//               <img
+//                 alt=""
+//                 src={featuredTestimonial.author.logoUrl}
+//                 className="h-10 w-auto flex-none"
+//               />
+//             </figcaption>
+//           </figure> */}
+//           {testimonials.map((columnGroup, columnGroupIdx) => (
+//             <div
+//               key={columnGroupIdx}
+//               className="space-y-8 xl:contents xl:space-y-0"
+//             >
+//               {columnGroup.map((column, columnIdx) => (
+//                 <div
+//                   key={columnIdx}
+//                   className={classNames(
+//                     (columnGroupIdx === 0 && columnIdx === 0) ||
+//                       (columnGroupIdx === testimonials.length - 1 &&
+//                         columnIdx === columnGroup.length - 1)
+//                       ? 'xl:row-span-2'
+//                       : 'xl:row-start-1',
+//                     'space-y-8',
+//                   )}
+//                 >
+//                   {column.map((testimonial, i) => (
+//                     <figure
+//                       key={i}
+//                       className="rounded-2xl bg-white p-6 ring-1 shadow-lg ring-gray-900/5"
+//                     >
+//                       <blockquote className="text-gray-900">
+//                         <BoldGratitude text={`“${testimonial.body}”`} />
+//                       </blockquote>
+//                       {/* <figcaption className="mt-6 flex items-center gap-x-4">
+//                         <img
+//                           alt=""
+//                           src={testimonial.author.imageUrl}
+//                           className="size-10 rounded-full bg-gray-50"
+//                         />
+//                         <div>
+//                           <div className="font-semibold">
+//                             - {testimonial.author.name}
+//                           </div>
+//                           <div className="text-gray-600">
+//                             {testimonial.author.handle}
+//                           </div>
+//                         </div>
+//                       </figcaption> */}
+//                     </figure>
+//                   ))}
+//                 </div>
+//               ))}
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
 
 export default async function Home() {
   const currentSubCount = 17501 // used in case API call to retrieve subscriber count fails, should be updated with real number occasionally
@@ -400,9 +398,10 @@ export default async function Home() {
           {/* <FeatureSection /> */}
           {/* <BentoSection /> */}
           <DarkBentoSection />
-          <Container>
+          {/* <Container>
             <Testimonials subscriberCount={subscriberCount} />
-          </Container>
+          </Container> */}
+          <Reviews subscriberCount={subscriberCount} />
         </div>
       </main>
       <Footer />
