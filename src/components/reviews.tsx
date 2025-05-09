@@ -128,7 +128,7 @@ function Review({
   return (
     <figure
       className={clsx(
-        'animate-fade-in rounded-3xl bg-white p-6 opacity-0 shadow-md shadow-gray-900/5',
+        'animate-fade-in rounded-2xl bg-white p-6 ring-1 shadow-lg ring-gray-900/5',
         className,
       )}
       style={{ animationDelay }}
