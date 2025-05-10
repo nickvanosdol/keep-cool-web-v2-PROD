@@ -128,7 +128,7 @@ function Review({
   return (
     <figure
       className={clsx(
-        'animate-fade-in rounded-2xl bg-white p-6 ring-1 shadow-lg ring-gray-900/5',
+        'rounded-2xl bg-white p-6 ring-1 shadow-lg ring-gray-900/5',
         className,
       )}
       style={{ animationDelay }}
@@ -211,7 +211,7 @@ function ReviewColumn({
 
 function ReviewGrid() {
   let containerRef = useRef<React.ElementRef<'div'>>(null)
-  let isInView = useInView(containerRef, { once: true, amount: 0.4 })
+  let isInView = useInView(containerRef, { once: true, amount: 0.001 })
   let columns = splitArray(reviews, 3)
   let column1 = columns[0]
   let column2 = columns[1]
