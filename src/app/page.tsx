@@ -56,8 +56,8 @@ function Hero({ subscriberCount }: { subscriberCount: number }) {
             Keep Cool.
           </h1>
           <p className="mt-8 max-w-xl text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
-            A twice weekly newsletter telling underpriced stories at the
-            intersection of climate tech & business.
+            A twice weekly newsletter exploring sustainability across all scales
+            and sectors.
           </p>
           <p className="mt-8 max-w-lg text-lg/6 font-medium text-gray-950/75 sm:text-xl/7">
             Join{' '}
