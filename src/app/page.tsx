@@ -36,6 +36,7 @@ function Hero({ subscriberCount }: { subscriberCount: number }) {
         alt="clouds background"
         className="absolute h-full w-full rounded-4xl object-cover px-2 pt-2 opacity-25"
         priority
+        unoptimized={false}
       />
       <Container className="relative">
         <Navbar
